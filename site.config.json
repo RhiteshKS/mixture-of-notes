@@ -1,0 +1,50 @@
+{
+  "name": "Mixture of Notes",
+  "tagline": "Fine-tuning and MoE inference on small hardware",
+  "author": "Rhitesh Kumar Singh",
+  "url": "https://rhiteshks.github.io",
+  "basePath": "/mixture-of-notes",
+  "headline": "Notes on fine-tuning and serving models on <em>small hardware.</em>",
+  "intro": "Fine-tuning experiments, mixture-of-experts inference and paper reproductions, written up as series. Everything here is meant to run on a single 8 GB GPU unless a post says otherwise.",
+  "about": [
+    "I am a machine learning engineer working on language models. I write this blog to understand things properly: most posts start as an experiment I wanted to run for myself.",
+    "Two threads run in parallel. One is fine-tuning small models. The other is squeezing mixture-of-experts inference onto a single 8 GB card, learning the techniques as I go and reproducing the papers that describe them.",
+    "Replace this text with your own. It lives in the about field of site.config.json."
+  ],
+  "topics": ["fine-tuning", "LoRA", "MoE", "expert offloading", "quantization", "paper reproductions"],
+  "links": [
+    { "label": "GitHub", "href": "https://github.com/RhiteshKS" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/" },
+    { "label": "X", "href": "https://x.com/" }
+  ],
+  "series": [
+    {
+      "slug": "fine-tuning-from-the-inside",
+      "title": "Fine-tuning from the inside",
+      "color": "--s-ft",
+      "blurb": "New losses, new heads and new tokens on small language models, with every experiment sized for an 8 GB card.",
+      "long": "A hands-on series about changing what a small language model learns and how it learns it. It starts with a memory budget, then replaces the loss, swaps in a new head, adds tokens, and ends with reading a finished run."
+    },
+    {
+      "slug": "moe-inference-on-8gb",
+      "title": "MoE inference on 8 GB",
+      "color": "--s-inf",
+      "blurb": "Optimizing mixture-of-experts inference on a single 8 GB card, from the architecture to the techniques in recent papers.",
+      "long": "A hands-on series about running mixture-of-experts models as fast as a small card allows. It covers the architecture, the memory budget, expert offloading, quantization and other optimizations, with the arithmetic shown so you can redo it for your own hardware."
+    },
+    {
+      "slug": "paper-margins",
+      "title": "Paper margins",
+      "color": "--s-pap",
+      "blurb": "Short notes on papers, with a focus on mixture-of-experts work, and an attempt to reproduce each one on 8 GB.",
+      "long": "Reading notes in a fixed format: the claim, the setup, the evidence, and the part I do not believe yet. The focus is mixture-of-experts architecture and inference, and each note ends with an attempt to reproduce the result on an 8 GB card."
+    },
+    {
+      "slug": "build-an-inference-engine",
+      "title": "Build an inference engine",
+      "color": "--s-eng",
+      "blurb": "Writing an LLM inference engine from the first principles up, then adding the techniques modern engines use, sized for one 8 GB card.",
+      "long": "A from-scratch series on how an inference engine works. It starts with the generation loop and the difference between prefill and decode, then builds the KV cache and its allocator, prefix caching, attention kernels, quantization, batching and scheduling, prefill and decode disaggregation, and speculative decoding. Every part is measured on a single RTX 5060 with 8 GB."
+    }
+  ]
+}
