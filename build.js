@@ -237,6 +237,8 @@ function load() {
     if (p.series && !seriesBy[p.series]) throw new Error(p.slug + '.md: unknown series "' + p.series + '" (add it to site.config.json)');
   });
   published = POSTS.filter(p => p.published).sort((a, b) => b.date.localeCompare(a.date));
+  /* hide a series until it has at least one post */
+  SERIES = SERIES.filter(s => POSTS.some(p => p.series === s.slug));
 }
 const partsOf = slug => POSTS.filter(p => p.series === slug).sort((a, b) => a.part - b.part);
 

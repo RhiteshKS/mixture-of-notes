@@ -17,9 +17,6 @@ Running mixture-of-experts models as fast as a small card allows: the architectu
 ### [Paper margins](https://rhiteshks.github.io/mixture-of-notes/series/paper-margins/)
 Reading notes in a fixed format: the claim, the setup, the evidence, and the part I do not believe yet. The focus is mixture-of-experts work, and each note ends with an attempt to reproduce the result on an 8 GB card.
 
-### [Build an inference engine](https://rhiteshks.github.io/mixture-of-notes/series/build-an-inference-engine/)
-An LLM inference engine written from first principles: the generation loop, prefill and decode, the KV cache and its allocator, prefix caching, attention kernels, quantization, batching and scheduling, and speculative decoding. Every part is measured on a single RTX 5060 with 8 GB.
-
 ## Topics
 
 Fine-tuning · LoRA · Mixture of experts · Expert offloading · Quantization · Paper reproductions
